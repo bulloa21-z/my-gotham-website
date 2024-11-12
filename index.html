@@ -1,50 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
-    <link rel="stylesheet" href="styles.css">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Gotham City</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Gotham-themed colors */
+        body {
+            background-color: #1c1c1c; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark blue for Gotham feel */
+            color: #ffffff;
+        }
+
+        nav.navbar {
+            background-color: #16a085; /* Gotham-inspired green for navbar */
+        }
+
+        nav .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        nav .navbar-nav .nav-link:hover {
+            color: #000000 !important; /* Dark color when hovering */
+            background-color: #f39c12; /* Gotham yellow when hovered */
+        }
+
+        .btn-primary {
+            background-color: #6ab446; /* Joker's green */
+            border-color: #6ab446;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e824c; /* Darker green on hover */
+            border-color: #1e824c;
+        }
+
+        .card {
+            background-color: #34495e; /* Dark card background */
+            color: #ffffff;
+        }
+
+        .card .card-title {
+            color: #6ab446; /* Green title for Gotham touch */
+        }
+
+        footer {
+            background-color: #2c3e50; /* Dark blue footer */
+            color: #ffffff;
+        }
+
+        .modal-content {
+            background-color: #2c3e50; /* Dark background for modal */
+            color: #ffffff;
+        }
+
+        .embed-responsive {
+            background-color: #34495e; /* Dark background for embedded YouTube */
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
+    <!-- Header -->
+    <header class="text-white text-center py-3">
         <h1>Welcome to Gotham City</h1>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="GothamVillains.html">Villain Profiles</a></li>
-            <li><a href="#about">About Gotham</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Villains
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Joker</a></li>
+                            <li><a class="dropdown-item" href="#">Bane</a></li>
+                            <li><a class="dropdown-item" href="#">Harley Quinn</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <h2>Explore Gotham</h2>
-    
-    <p>Welcome to Gotham City, where the night never sleeps and villains are planning their next move. My name is Bryan Ulloa, and I have designed this website to explore the most popular villains of Gotham and their come up. Discover more about Gotham</p>
+    <!-- About Gotham Section -->
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <h2>About Gotham</h2>
+                <p>Gotham takes place in the DC Universe, home to many iconic and popular characters including Batman and all of
+                his enemies.</p>
+            </div>
+            <div class="col">
+                <h2>Villains</h2>
+                <p>Learn more about Gotham's famous villains like the Joker, Harley Quinn, and many more!</p>
+            </div>
+        </div>
+    </main>
 
-    <section id="about">
-        <h2>About Gotham</h2>
-        <p>Gotham City is a metropolis filled with crime and corruption. From the  Joker to the beating down the block like Bane, Gotham's villains are the scariest out there.</p>
-    </section>
+    <!-- Gotham Villains  -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Joker -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="joker-image.jpg" class="card-img-top" alt="Joker">
+                    <div class="card-body">
+                        <h5 class="card-title">The Joker</h5>
+                        <p class="card-text">
+                        The Batman's greatest enemy.</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#jokerModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
 
-    <section id="contact">
+            <!-- Bane -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bane-image.jpg" class="card-img-top" alt="Bane">
+                    <div class="card-body">
+                        <h5 class="card-title">Bane</h5>
+                        <p class="card-text">Bane is the main villian in the trilogy of the Christopher Nolan films, The Batman Dark Knight Rises</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#baneModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Harley Quinn -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="harley-quinn-image.jpg" class="card-img-top" alt="Harley Quinn">
+                    <div class="card-body">
+                        <h5 class="card-title">Harley Quinn</h5>
+                        <p class="card-text">One of the most popular villians. She has incredible agility, she's outgoing and is in an abusive relationship with the joker</p>
+                        <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#harleyModal">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Joker Modal -->
+    <div class="modal fade" id="jokerModal" tabindex="-1" aria-labelledby="jokerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="jokerModalLabel">The Joker</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Detailed information about The Joker.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Embed -->
+    <div class="container mt-4">
+        <div class="embed-responsive">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=da6afm5AAIY&t=1s" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <section id="contact" class="container mt-4">
         <h2>Contact Us</h2>
-        <p>Do you have a question about Gotham City or its popular characters? Reach out to me please for more details. I’d love to hear your thoughts on Gotham City and their most dangerous villains.</p>
-        <p>Email: bryanulloa@gothamcity.com</p>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="exampleInputMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </section>
 
-    <footer>
-        <p>© 2024 Gotham City.</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-4">
+        <p>© 2024 Gotham City Chronicles.</p>
     </footer>
 
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
